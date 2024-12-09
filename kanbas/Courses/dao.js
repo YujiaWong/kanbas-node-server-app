@@ -29,4 +29,5 @@ export function deleteCourse(courseId) {
   Database.enrollments = enrollments.filter(
     (enrollment) => enrollment.course !== courseId
   );
+  //retun courses; //后加r
 }

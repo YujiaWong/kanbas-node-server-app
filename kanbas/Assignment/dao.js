@@ -18,11 +18,11 @@ export function retrieveAssignment(assignmentTitle) {
 }
 export function updateAssignment(assignmentId, updatedAssignment) {
   const { assignments } = Database;
-  const oldAssignment = assignments.filter(
+  const assignment = assignments.find(
     (assignment) => assignment._id === assignmentId
   );
-  Object.assign(oldAssignment, updatedAssignment);
-  return assignments;
+  Object.assign(assignment, updatedAssignment);
+  return assignment;
 }
 
 export function deleteAssignment(assignmentId) {
