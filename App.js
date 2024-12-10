@@ -16,7 +16,7 @@ import "dotenv/config";
 const CONNECTION_STRING =
   process.env.MONGO_CONNECTION_STRING ||
   "mongodb://127.0.0.1:27017/kanbas-cs5610-fa24";
-mongoose.connect(CONNECTION_STRING);
+mongoose.connect(CONNECTION_STRING); //标志当前的node.js服务器连接到了本地mongodb里的kanbas-cs5610-fa24这个数据库
 const app = express();
 app.use(
   cors({
